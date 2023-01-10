@@ -1,6 +1,6 @@
 # impomysql_bugreports
 
-Up to now, we have found 44 bugs in MySQL, MariaDB, TiDB and OceanBase, 28 of which have been confirmed by developers.
+Up to now, we have found 41 bugs in MySQL, MariaDB, TiDB and OceanBase, 39 of which have been confirmed by developers.
 
 ### MySQL
 
@@ -25,20 +25,20 @@ Up to now, we have found 44 bugs in MySQL, MariaDB, TiDB and OceanBase, 28 of wh
 
 | Url                                        | Status   | Sev   |
 | ------------------------------------------ | -------- | ----- |
-| https://jira.mariadb.org/browse/MDEV-30249 | Open     | Major |
-| https://jira.mariadb.org/browse/MDEV-30250 | Open     | Major |
-| https://jira.mariadb.org/browse/MDEV-30251 | Open     | Major |
-| https://jira.mariadb.org/browse/MDEV-30252 | Open     | Major |
-| https://jira.mariadb.org/browse/MDEV-30253 | Open     | Major |
-| https://jira.mariadb.org/browse/MDEV-30254 | Open     | Major |
+| https://jira.mariadb.org/browse/MDEV-30249 | Verified | Major |
+| https://jira.mariadb.org/browse/MDEV-30250 | Verified | Major |
+| https://jira.mariadb.org/browse/MDEV-30251 | Verified | Major |
+| https://jira.mariadb.org/browse/MDEV-30252 | Verified | Major |
+| https://jira.mariadb.org/browse/MDEV-30253 | Verified | Major |
+| https://jira.mariadb.org/browse/MDEV-30254 | Verified | Major |
 | https://jira.mariadb.org/browse/MDEV-30255 | Verified | Minor |
-| https://jira.mariadb.org/browse/MDEV-30257 | Open     | Major |
+| https://jira.mariadb.org/browse/MDEV-30257 | Verified | Major |
 | https://jira.mariadb.org/browse/MDEV-30258 | Open     | Minor |
-| https://jira.mariadb.org/browse/MDEV-30298 | Open     | Minor |
-| https://jira.mariadb.org/browse/MDEV-30299 | Open     | Major |
-| https://jira.mariadb.org/browse/MDEV-30300 | Open     | Minor |
+| https://jira.mariadb.org/browse/MDEV-30298 | Verified | Minor |
+| https://jira.mariadb.org/browse/MDEV-30299 | Verified | Major |
+| https://jira.mariadb.org/browse/MDEV-30300 | Verified | Minor |
 | https://jira.mariadb.org/browse/MDEV-30301 | Open     | Major |
-| https://jira.mariadb.org/browse/MDEV-30302 | Open     | Major |
+| https://jira.mariadb.org/browse/MDEV-30302 | Verified | Major |
 
 ### TiDB
 
