@@ -1,6 +1,6 @@
 # impomysql_bugreports
 
-This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysql). Up to now, we have found 40 bugs in MySQL, MariaDB, TiDB and OceanBase, 38 of which have been confirmed by developers.
+This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysql). Up to now, we have found 41 bugs in MySQL, MariaDB, TiDB and OceanBase, 39 of which have been confirmed by developers.
 
 ## MySQL
 
@@ -916,7 +916,40 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   -- The results are too long, see the bug report url
   ```
 
-* #3 https://github.com/pingcap/tidb/issues/40011
+* #3 https://github.com/pingcap/tidb/issues/38744
+
+  **Status**: Verified
+
+  **Version**: 6.3.0, 6.3.0
+
+  **Test case**
+
+  ```sql
+  drop table if exists t;
+  create table t (`pk` int primary key, c1 varchar(20), key (c1)) character set utf8 partition by hash(pk) partitions 2;
+  insert into t values (0,'e'),(1,'-0'),(2,'e');
+  
+  -- unstable bug
+  mysql> (SELECT NULL FROM t) UNION (SELECT (-c1) FROM t);
+  +------+
+  | NULL |
+  +------+
+  | NULL |
+  |    0 |
+  +------+
+  2 rows in set, 4 warnings (0.01 sec)
+  
+  mysql> (SELECT NULL FROM t) UNION (SELECT (-c1) FROM t);
+  +------+
+  | NULL |
+  +------+
+  | NULL |
+  |   -0 |
+  +------+
+  2 rows in set, 4 warnings (0.00 sec)
+  ```
+
+* #4 https://github.com/pingcap/tidb/issues/40011
 
   **Status**: Verified
 
@@ -946,7 +979,7 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   1 row in set, 3 warnings (0.00 sec)
   ```
 
-* #4 https://github.com/pingcap/tidb/issues/40012
+* #5 https://github.com/pingcap/tidb/issues/40012
 
   **Status**: Verified
 
@@ -976,7 +1009,7 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   1 row in set (0.00 sec)
   ```
 
-* #5 https://github.com/pingcap/tidb/issues/40013
+* #6 https://github.com/pingcap/tidb/issues/40013
 
   **Status**: Verified
 
@@ -1010,7 +1043,7 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   2 rows in set, 5 warnings (0.00 sec)
   ```
 
-* #6 https://github.com/pingcap/tidb/issues/40014
+* #7 https://github.com/pingcap/tidb/issues/40014
 
   **Status**: Verified
 
@@ -1040,7 +1073,7 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   1 row in set (0.00 sec)
   ```
 
-* #7 https://github.com/pingcap/tidb/issues/40015
+* #8 https://github.com/pingcap/tidb/issues/40015
 
   **Status**: Verified
 
@@ -1076,7 +1109,7 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   4 rows in set, 9 warnings (0.00 sec)
   ```
 
-* #8 https://github.com/pingcap/tidb/issues/40016
+* #9 https://github.com/pingcap/tidb/issues/40016
 
   **Status**: Verified
 
@@ -1101,7 +1134,7 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   Empty set, 1 warning (0.00 sec)
   ```
 
-* #9 https://github.com/pingcap/tidb/issues/40017
+* #10 https://github.com/pingcap/tidb/issues/40017
 
   **Status**: Verified
 
@@ -1127,7 +1160,7 @@ This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysq
   Empty set, 6 warnings (0.01 sec)
   ```
 
-* #10 https://github.com/pingcap/tidb/issues/40018
+* #11 https://github.com/pingcap/tidb/issues/40018
 
   **Status**: Verified
 
