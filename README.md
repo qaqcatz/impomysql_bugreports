@@ -1,6 +1,6 @@
 # impomysql_bugreports
 
-This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysql). Up to now, we have found 41 bugs in MySQL, MariaDB, TiDB and OceanBase, 39 of which have been confirmed by developers.
+This page lists all bugs found by impomysql (https://github.com/qaqcatz/impomysql_binary). Up to now, we have found 41 bugs in MySQL, MariaDB, TiDB and OceanBase, 39 of which have been confirmed by developers.
 
 ## MySQL
 
